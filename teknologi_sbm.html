@@ -1,0 +1,297 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket CCTV Terbaik - TeknologiSBM</title>
+    
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons for clean UI icons. 'defer' attribute ensures it loads without blocking the page. -->
+    <script src="https://unpkg.com/lucide-icons@0.372.0/dist/lucide.min.js" defer></script>
+
+
+    <style>
+        /* Custom styles to match the brochure's theme */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+        }
+        .brand-active {
+            background-color: #2563eb !important; /* Blue-600 */
+            color: white !important;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .card-hover-effect {
+            transition: all 0.3s ease-in-out;
+        }
+        .card-hover-effect:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+        /* Style for the modal */
+        #order-modal.hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-8">
+        <div class="container mx-auto text-center px-4">
+            <!-- Back to Home Button -->
+            <div class="text-left mb-6">
+                <a href="index.html" class="inline-flex items-center gap-2 bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-full hover:bg-gray-300 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-left w-5 h-5"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+                    <span>Kembali ke Halaman Utama</span>
+                </a>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-extrabold text-blue-700 uppercase">
+                PAKET CCTV TERBAIK TAHUN INI
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600 mt-2">TeknologiSBM</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8">
+        
+        <!-- Navigation / Brand Filter -->
+        <nav class="flex justify-center items-center gap-2 md:gap-4 mb-8 flex-wrap">
+            <button data-brand="all" class="brand-filter brand-active text-sm md:text-base font-semibold py-2 px-4 rounded-full bg-white text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">Semua Brand</button>
+            <button data-brand="Hikvision" class="brand-filter text-sm md:text-base font-semibold py-2 px-4 rounded-full bg-white text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">Hikvision</button>
+            <button data-brand="HiLook" class="brand-filter text-sm md:text-base font-semibold py-2 px-4 rounded-full bg-white text-gray-700 hover:bg-blue-500 hover:text-white transition-all duration-300">HiLook</button>
+        </nav>
+
+        <!-- Filter and Sorting Controls -->
+        <div class="flex flex-col md:flex-row justify-between items-center mb-8 bg-white p-4 rounded-lg shadow">
+            <div class="flex items-center gap-2 mb-4 md:mb-0">
+                <i data-lucide="filter" class="w-5 h-5 text-gray-500"></i>
+                <label for="camera-filter" class="font-semibold">Filter Kamera:</label>
+                <select id="camera-filter" class="border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="all">Semua Jumlah</option>
+                    <!-- Options will be populated by JavaScript -->
+                </select>
+            </div>
+            <div class="flex items-center gap-2">
+                 <i data-lucide="arrow-up-down" class="w-5 h-5 text-gray-500"></i>
+                <label for="sort-filter" class="font-semibold">Urutkan Harga:</label>
+                <select id="sort-filter" class="border border-gray-300 rounded-md p-2 focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="default">Default</option>
+                    <option value="asc">Terendah - Tertinggi</option>
+                    <option value="desc">Tertinggi - Terendah</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- CCTV Packages Grid -->
+        <div id="paket-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
+            <!-- CCTV Package Cards will be injected here by JavaScript -->
+        </div>
+        
+        <!-- Hot Sale Section -->
+        <section class="mt-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-red-600">🔥 Hot Sale! 🔥</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Hot Sale Item 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center card-hover-effect">
+                    <h3 class="text-xl font-bold text-blue-700">Ezviz C6N 2MP</h3>
+                    <p class="text-gray-500 mb-2">Jasa Pasang & Memory 64GB</p>
+                    <p class="text-2xl font-bold text-gray-800 my-4">Rp 950.000</p>
+                    <button onclick="openOrderModal('Paket Hot Sale: Ezviz C6N 2MP')" class="mt-auto w-full bg-red-500 text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 transition-colors">
+                        Pesan Sekarang
+                    </button>
+                </div>
+                <!-- Hot Sale Item 2 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center flex flex-col items-center card-hover-effect">
+                    <h3 class="text-xl font-bold text-blue-700">Modem 5G</h3>
+                     <p class="text-gray-500 mb-2">(Termasuk kartu perdana)</p>
+                    <p class="text-2xl font-bold text-gray-800 my-4">Rp 650.000</p>
+                    <button onclick="openOrderModal('Paket Hot Sale: Modem 5G')" class="mt-auto w-full bg-red-500 text-white font-bold py-2 px-4 rounded-full hover:bg-red-600 transition-colors">
+                        Pesan Sekarang
+                    </button>
+                </div>
+                <!-- Additional Info Card -->
+                <div class="bg-blue-50 rounded-lg border-2 border-blue-200 border-dashed p-6 text-center flex flex-col justify-center">
+                    <h3 class="text-xl font-bold text-blue-800">Info Tambahan</h3>
+                    <ul class="text-gray-700 mt-4 space-y-2 text-left">
+                        <li><span class="font-semibold">✓</span> Gratis Pasang & Setting Online</li>
+                        <li><span class="font-semibold">✓</span> Garansi Resmi 1 Tahun</li>
+                        <li class="text-sm">Penambahan Kabel CCTV: 9.000/m</li>
+                        <li class="text-sm">Penambahan Kabel LAN: 8.000/m</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white mt-16 py-8">
+        <div class="container mx-auto text-center px-4">
+            <!-- SBM Group Logo (SVG) -->
+            <svg class="w-16 h-16 mx-auto mb-4" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50 0L95.1141 24.2705V75.7295L50 100L4.8859 75.7295V24.2705L50 0Z" fill="#2563EB"/>
+                <path d="M50 15L84.641 32.3197V67.6803L50 85L15.359 67.6803V32.3197L50 15Z" fill="white"/>
+                <path d="M68 39H57.5L50 25L42.5 39H32L46 56L40 75L50 65L60 75L54 56L68 39Z" fill="#2563EB"/>
+            </svg>
+            <p class="font-bold text-xl">TeknologiSBM</p>
+            <p class="text-gray-400 mt-2">Solusi Keamanan Terpercaya Anda</p>
+            <div class="flex justify-center gap-6 mt-4">
+                <a href="https://wa.me/628881123222" target="_blank" class="hover:text-blue-400 transition-colors flex items-center gap-2">
+                    <i data-lucide="phone"></i>
+                    <span>+62 888-1123-222</span>
+                </a>
+                <a href="https://www.tiktok.com/@cctvbagusterbaik?_t=ZS-8yv14bHH8le&_r=1" target="_blank" class="hover:text-blue-400 transition-colors flex items-center gap-2">
+                    <i data-lucide="video"></i>
+                    <span>TikTok @cctvbagusterbaik</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Order Form Modal -->
+    <div id="order-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex justify-center items-center p-4">
+        <div class="bg-white rounded-lg shadow-2xl p-8 w-full max-w-md relative animate-fade-in-up">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+            <h2 class="text-2xl font-bold mb-6 text-center text-blue-700">Formulir Pemesanan</h2>
+            <form id="order-form">
+                <div class="mb-4">
+                    <label for="nama" class="block text-gray-700 font-semibold mb-2">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" required>
+                </div>
+                <div class="mb-4">
+                    <label for="whatsapp" class="block text-gray-700 font-semibold mb-2">Nomor HP / WhatsApp</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Contoh: 08123456789" required>
+                </div>
+                <div class="mb-4">
+                    <label for="paket" class="block text-gray-700 font-semibold mb-2">Pilihan Paket</label>
+                    <input type="text" id="paket" name="paket" class="w-full px-4 py-2 border bg-gray-100 border-gray-300 rounded-lg" readonly>
+                </div>
+                <div class="mb-6">
+                    <label for="catatan" class="block text-gray-700 font-semibold mb-2">Catatan Tambahan</label>
+                    <textarea id="catatan" name="catatan" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Contoh: Jadwal pemasangan, permintaan khusus, dll."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-green-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-green-600 transition-colors flex items-center justify-center gap-2">
+                    <i data-lucide="send"></i>
+                    <span>Kirim Pesanan via WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+    window.addEventListener('load', function() {
+        
+        const cctvPackages = [
+            { brand: 'Hikvision', type: '2MP', cameras: 2, price: 3050000 }, { brand: 'Hikvision', type: '2MP', cameras: 3, price: 3750000 }, { brand: 'Hikvision', type: '2MP', cameras: 4, price: 4450000 }, { brand: 'Hikvision', type: '2MP', cameras: 6, price: 6750000 }, { brand: 'Hikvision', type: '2MP', cameras: 8, price: 8150000 },
+            { brand: 'Hikvision', type: '5MP', cameras: 2, price: 3650000 }, { brand: 'Hikvision', type: '5MP', cameras: 3, price: 4450000 }, { brand: 'Hikvision', type: '5MP', cameras: 4, price: 5250000 }, { brand: 'Hikvision', type: '5MP', cameras: 6, price: 7650000 }, { brand: 'Hikvision', type: '5MP', cameras: 8, price: 9250000 },
+            { brand: 'Hikvision', type: 'IP 2MP', cameras: 2, price: 3650000 }, { brand: 'Hikvision', type: 'IP 2MP', cameras: 3, price: 4450000 }, { brand: 'Hikvision', type: 'IP 2MP', cameras: 4, price: 5250000 }, { brand: 'Hikvision', type: 'IP 2MP', cameras: 6, price: 7650000 }, { brand: 'Hikvision', type: 'IP 2MP', cameras: 8, price: 9250000 },
+            { brand: 'Hikvision', type: 'IP 4MP', cameras: 2, price: 4950000 }, { brand: 'Hikvision', type: 'IP 4MP', cameras: 3, price: 6150000 }, { brand: 'Hikvision', type: 'IP 4MP', cameras: 4, price: 7350000 }, { brand: 'Hikvision', type: 'IP 4MP', cameras: 6, price: 11750000 }, { brand: 'Hikvision', type: 'IP 4MP', cameras: 8, price: 14750000 },
+            { brand: 'HiLook', type: '2MP Infrared', cameras: 2, price: 2650000 }, { brand: 'HiLook', type: '2MP Infrared', cameras: 3, price: 3150000 }, { brand: 'HiLook', type: '2MP Infrared', cameras: 4, price: 3650000 }, { brand: 'HiLook', type: '2MP Infrared', cameras: 5, price: 4750000 }, { brand: 'HiLook', type: '2MP Infrared', cameras: 6, price: 5250000 }, { brand: 'HiLook', type: '2MP Infrared', cameras: 7, price: 5750000 }, { brand: 'HiLook', type: '2MP Infrared', cameras: 8, price: 6250000 }, { brand: 'HiLook', type: '2MP Infrared', cameras: 10, price: 9650000 }, { brand: 'HiLook', type: '2MP Infrared', cameras: 12, price: 10650000 }, { brand: 'HiLook', type: '2MP Infrared', cameras: 16, price: 12650000 },
+        ];
+
+        const paketContainer = document.getElementById('paket-container');
+        const brandFilters = document.querySelectorAll('.brand-filter');
+        const cameraFilter = document.getElementById('camera-filter');
+        const sortFilter = document.getElementById('sort-filter');
+        const modal = document.getElementById('order-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const orderForm = document.getElementById('order-form');
+
+        function getSpecs(cameraCount) {
+            if (cameraCount <= 4) return 'HDD 500Gb, Kabel 50m, PSU 10A';
+            if (cameraCount <= 8) return 'HDD 1000Gb, Kabel 100m, PSU 10A';
+            if (cameraCount <= 16) return 'HDD 2000Gb, Kabel 200m, PSU 20A';
+            return 'Spesifikasi custom';
+        }
+
+        function formatRupiah(number) { return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(number); }
+
+        function renderPackages(packages) {
+            paketContainer.innerHTML = '';
+            if (packages.length === 0) { paketContainer.innerHTML = `<p class="text-center text-gray-500 col-span-full">Paket tidak ditemukan.</p>`; return; }
+            packages.forEach(pkg => {
+                const spec = getSpecs(pkg.cameras);
+                const card = `<div class="bg-white rounded-lg shadow-lg p-6 flex flex-col card-hover-effect"><div class="mb-4"><span class="inline-block bg-blue-100 text-blue-800 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">${pkg.brand}</span><span class="inline-block bg-gray-100 text-gray-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">${pkg.type}</span></div><h3 class="text-2xl font-bold text-gray-800">${pkg.cameras} Kamera</h3><p class="text-3xl font-extrabold text-blue-600 my-4">${formatRupiah(pkg.price)}</p><ul class="text-sm text-gray-600 space-y-2 mb-6 border-t pt-4"><li><span class="font-semibold text-green-600">✓</span> ${spec}</li><li><span class="font-semibold text-green-600">✓</span> Garansi Resmi 1 Tahun</li></ul><button class="pesan-btn mt-auto w-full bg-blue-500 text-white font-bold py-2 px-4 rounded-full hover:bg-blue-600 transition-colors" data-paket-nama="${pkg.brand} ${pkg.type} - ${pkg.cameras} Kamera">Pesan Sekarang</button></div>`;
+                paketContainer.innerHTML += card;
+            });
+            if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+        }
+
+        function applyFiltersAndSort() {
+            let filteredPackages = [...cctvPackages];
+            const activeBrand = document.querySelector('.brand-filter.brand-active').dataset.brand;
+            if (activeBrand !== 'all') { filteredPackages = filteredPackages.filter(pkg => pkg.brand === activeBrand); }
+            const selectedCameras = cameraFilter.value;
+            if (selectedCameras !== 'all') { filteredPackages = filteredPackages.filter(pkg => pkg.cameras == selectedCameras); }
+            const sortValue = sortFilter.value;
+            if (sortValue === 'asc') { filteredPackages.sort((a, b) => a.price - b.price); } 
+            else if (sortValue === 'desc') { filteredPackages.sort((a, b) => b.price - a.price); }
+            renderPackages(filteredPackages);
+        }
+
+        function populateCameraFilter() {
+            const cameraCounts = [...new Set(cctvPackages.map(p => p.cameras))].sort((a, b) => a - b);
+            cameraCounts.forEach(count => {
+                const option = document.createElement('option');
+                option.value = count; option.textContent = `${count} Kamera`;
+                cameraFilter.appendChild(option);
+            });
+        }
+
+        brandFilters.forEach(button => {
+            button.addEventListener('click', () => {
+                brandFilters.forEach(btn => btn.classList.remove('brand-active'));
+                button.classList.add('brand-active');
+                applyFiltersAndSort();
+            });
+        });
+        cameraFilter.addEventListener('change', applyFiltersAndSort);
+        sortFilter.addEventListener('change', applyFiltersAndSort);
+
+        window.openOrderModal = function(packageName) {
+            document.getElementById('paket').value = packageName;
+            modal.classList.remove('hidden');
+            if (typeof lucide !== 'undefined') { lucide.createIcons(); }
+        }
+        paketContainer.addEventListener('click', function(e) {
+            if (e.target && e.target.classList.contains('pesan-btn')) {
+                openOrderModal(e.target.dataset.paketNama);
+            }
+        });
+
+        function closeModal() { modal.classList.add('hidden'); orderForm.reset(); }
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) { if (e.target === modal) { closeModal(); } });
+
+        orderForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nama = document.getElementById('nama').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const paket = document.getElementById('paket').value;
+            const catatan = document.getElementById('catatan').value;
+            let message = `Halo TeknologiSBM, saya ingin memesan paket CCTV.\n\n*Nama:* ${nama}\n*No. HP/WA:* ${whatsapp}\n*Paket:* ${paket}\n`;
+            if (catatan) { message += `*Catatan:* ${catatan}\n\n`; }
+            message += `Mohon informasinya lebih lanjut. Terima kasih.`;
+            const whatsappURL = `https://wa.me/628881123222?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+            closeModal();
+        });
+
+        populateCameraFilter();
+        applyFiltersAndSort();
+    });
+    </script>
+
+</body>
+</html>
